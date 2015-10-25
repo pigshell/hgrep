@@ -1,0 +1,29 @@
+{
+  "name": "hgrep",
+  "version": "0.1.0",
+  "description": "grep HTML with CSS selectors",
+  "keywords": [
+    "html",
+    "grep",
+    "cheerio",
+    "cli"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test; ./test-hgrep.sh"
+  },
+  "author": {
+    "name": "Ganesh Varadarajan",
+    "email": "dev@pigshell.com"
+  },
+  "dependencies": {
+    "cheerio": "*",
+    "readtoend": "*",
+    "docopt": "*"
+  },
+  "preferGlobal": true,
+  "license": "MIT",
+  "bin": {
+    "hgrep": "hgrep.js"
+  }
+}
