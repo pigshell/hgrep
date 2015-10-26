@@ -1,4 +1,4 @@
-# hgrep - search and extract from HTML using CSS selectors
+# hgrep - search HTML with CSS selectors
 
 > Some people, when confronted with an HTML parsing problem, think, "I know,
 > I'll use `hgrep`!" Now they have -1 problems.
@@ -31,12 +31,12 @@ best, most user-friendly APIs are available in the form of
 
 `hgrep` is a simple CLI wrapper around
 [Cheerio](https://github.com/cheeriojs/cheerio), enabling the use of familiar
-jQuery/CSS3 selectors to `grep` through HTML on the command line.
+jQuery/CSS selectors to `grep` through HTML on the command line.
 
 Detailed usage is documented below.
 
-hgrep(1) -- search and extract from HTML using CSS selectors
-============================================================
+hgrep(1) -- search HTML with CSS selectors
+==========================================
 
 ## SYNOPSIS
 
@@ -46,7 +46,7 @@ hgrep(1) -- search and extract from HTML using CSS selectors
 ## DESCRIPTION
 
 **hgrep** searches an HTML document or fragments read from standard input for
-elements matching a given condition, specified as a jQuery/CSS3-like
+elements matching a given condition, specified as a jQuery/CSS-like
 `<selector>`. The list of selected elements is optionally filtered by another
 selector which specifies constraints on their descendants and is then reduced
 to an optional range. By default, the selection is serialized to HTML and
@@ -55,7 +55,7 @@ in the selection may be output.
 
 The following parameters are available:
 
-  * `<selector>`: Specifies the elements to be selected in a jQuery/CSS3-style
+  * `<selector>`: Specifies the elements to be selected in a jQuery/CSS-style
     format as implemented by [cheerio](https://github.com/cheeriojs/cheerio),
     which uses [css-select](https://github.com/fb55/css-select). Custom
     selectors of note include `:contains`, which can be used to specify what
