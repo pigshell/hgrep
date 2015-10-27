@@ -1,24 +1,35 @@
 # hgrep - search HTML with CSS selectors
 
 > Some people, when confronted with an HTML parsing problem, think, "I know,
-> I'll use `hgrep`!" Now they have -1 problems.
+> I'll use hgrep!" Now they have -1 problems.
 
-`hgrep` is a Unix CLI tool which lets you select elements with jQuery/CSS
-syntax and print either the HTML serialization of the selection, or a
-specified attribute of each element, or their text representation.
+**hgrep** is a Unix CLI tool which lets you select elements with jQuery/CSS
+syntax and print the HTML serialization of the selection, or its text
+representation, or a specified attribute of each element.
 
 For example, to print all the story links from the HN front page:
 
     curl -s https://news.ycombinator.com | hgrep -a href ".athing .title > a"
 
-Or which subreddits feature on the Reddit front page:
+Print the list of subreddits featuring on the Reddit front page:
 
     curl -s https://www.reddit.com | hgrep -t ".sitetable a.subreddit"
 
 
 ## Installation
 
+Install the last published version from npm:
+
+    npm install -g hgrep
+
+Install from this directory:
+
     npm install -g
+
+Testing:
+
+    npm install
+    npm test
 
 ## Background
 
@@ -29,9 +40,10 @@ best, most user-friendly APIs are available in the form of
 [jQuery](https://jquery.com/) in the browser and a jQuery-like NodeJS library,
 [Cheerio](https://github.com/cheeriojs/cheerio).
 
-`hgrep` is a simple CLI wrapper around
-[Cheerio](https://github.com/cheeriojs/cheerio), enabling the use of familiar
-jQuery/CSS selectors to `grep` through HTML on the command line.
+**hgrep** is a simple CLI wrapper around
+[Cheerio](https://github.com/cheeriojs/cheerio), and enables the use of
+familiar jQuery/CSS selectors to **grep** through HTML on the command line. It
+is based on the [pigshell](http://pigshell.com) command of the same name.
 
 Detailed usage is documented below.
 
